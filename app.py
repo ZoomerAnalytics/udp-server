@@ -11,7 +11,7 @@ logging.basicConfig(
 )
 
 SERVER_HOST = '0.0.0.0'
-SERVER_PORT = os.environ['UDP_SERVER_PORT']
+SERVER_PORT = os.environ.get('UDP_SERVER_PORT', 10000)
 
 try:
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
